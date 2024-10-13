@@ -62,7 +62,8 @@ class _CommonTextFieldState extends State<CommonTextField> {
         labelStyle: TextStyle(color: widget.accentColor ?? Colors.black54), // Set accent color
         helperText: widget.helperText,
         prefixIcon: widget.prefixIconData != null
-            ? Icon(widget.prefixIconData, color: widget.accentColor ?? theme.colorScheme.primary) // Set accent color for prefix icon
+            ? Icon(widget.prefixIconData,
+              color: widget.accentColor ?? theme.colorScheme.primary) // Set accent color for prefix icon
             : null,
         suffixIcon: widget.obscureText
             ? IconButton(
@@ -71,7 +72,8 @@ class _CommonTextFieldState extends State<CommonTextField> {
               _isObscure = !_isObscure;
             });
           },
-          icon: Icon(_isObscure ? widget.passwordShowIcon ?? Icons.visibility : widget.passwordHideIcon ?? Icons.visibility_off),
+          icon: Icon(_isObscure ? widget.passwordShowIcon ??
+              Icons.visibility : widget.passwordHideIcon ?? Icons.visibility_off),
           color: widget.accentColor ?? theme.colorScheme.primary,
         )
             : null,

@@ -19,18 +19,18 @@ class _HomePageState extends State<HomePage> {
   }
 
   getInitData() async {
-    //! This is to get all medications from the pre-defined json file.
+    // To get all medications from the pre-defined json file
     medicationList = await MedicationManager.getAllMedications();
 
-    //! This is to update the state again.
+    // To update the state again
     setState(() {});
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // TODO
-      floatingActionButton: FloatingActionButton(onPressed: (){}, child: Icon(Icons.add),),
+      // Is a placeholder for the 'add' button
+      floatingActionButton: FloatingActionButton(onPressed: (){}, child: Icon(Icons.add)),
       appBar: AppBar(
         title: const Text('Home Page'),
       ),

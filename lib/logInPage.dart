@@ -23,27 +23,29 @@ class _LogInPageState extends State<LogInPage> {
         child: Container(
           padding: const EdgeInsets.all(15),
           alignment: Alignment.center,
+
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             children: [
               const SizedBox(height: 100),
-              // TODO - a logo?
+
+              // TODO - Is a placeholder image
               Image.network(
                 "https://cdn.pixabay.com/photo/2016/09/14/20/50/tooth-1670434_1280.png",
                 width: 200,
                 height: 200,
               ),
               const SizedBox(height: 50),
+
               Text(
-                "Medication App",
+                "GreenSHeart",
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                   fontFamily: 'Arial',
                 ),
               ),
-
               const SizedBox(height: 80),
 
               // Email Field
@@ -68,16 +70,17 @@ class _LogInPageState extends State<LogInPage> {
               ),
               const SizedBox(height: 32),
 
-              Container(
+              SizedBox(
                 width: double.infinity,
                 height: 50,
                 child: FilledButton(
                   onPressed: () {
                     if (emailController.text.isEmpty ||
                         passwordController.text.isEmpty) {
-                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                        content: Text('There is an input of email or password'),
-                      ));
+                      ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: Text('Please enter email and password'),
+                          ));
                       return;
                     }
 
@@ -92,18 +95,16 @@ class _LogInPageState extends State<LogInPage> {
                               builder: (context) => const HomePage()));
 
                       setState(() {
-                        isLoading = false;
-                      });
+                        isLoading = false;});
                     });
                   },
-                  child: isLoading
-                      ? Center(
+
+                  child: isLoading ? Center(
                     child: CircularProgressIndicator(
                       strokeWidth: 4,
-                      color: Colors.white,
+                      color: Colors.white30,
                     ),
-                  )
-                      : Text('LOG IN'),
+                  ) : Text('LOG IN'),
                 ),
               ),
             ],

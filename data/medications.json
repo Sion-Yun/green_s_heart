@@ -1,56 +1,56 @@
 [
   {
     "id": "0",
-    "name": "John",
-    "time": "12:00",
-    "dose": "Twice a day after meal"
+    "name": "Lixiana",
+    "time": "08:40",
+    "dose": "60 mg"
   },
   {
     "id": "1",
-    "name": "Doe",
-    "time": "12:00",
-    "dose": "Once a day after meal"
+    "name": "Herben SR",
+    "time": "08:40",
+    "dose": "90 mg"
   },
   {
     "id": "2",
-    "name": "Sam",
+    "name": "Nebilet M",
     "time": "12:00",
-    "dose": "Once a day after meal"
+    "dose": "1.25 mg"
   },
   {
     "id": "3",
-    "name": "John",
+    "name": "Suvaro OD",
     "time": "12:00",
-    "dose": "Twice a day after meal"
+    "dose": "5 mg"
   },
   {
     "id": "4",
-    "name": "Doe",
+    "name": "Tambocor",
     "time": "12:00",
-    "dose": "Once a day after meal"
+    "dose": "50 mg"
   },
   {
     "id": "5",
-    "name": "Sam",
-    "time": "12:00",
-    "dose": "Once a day after meal"
+    "name": "Apo-amitriptyline",
+    "time": "18:30",
+    "dose": "10 mg"
   },
   {
     "id": "6",
-    "name": "John",
-    "time": "12:00",
-    "dose": "Twice a day after meal"
+    "name": "Rivotril",
+    "time": "18:30",
+    "dose": "0.5 mg"
   },
   {
     "id": "7",
-    "name": "Doe",
-    "time": "12:00",
-    "dose": "Once a day after meal"
+    "name": "LEXAPRO",
+    "time": "20:00",
+    "dose": "10 mg"
   },
   {
     "id": "8",
-    "name": "Sam",
-    "time": "12:00",
-    "dose": "Once a day after meal"
+    "name": "Paracetamol",
+    "time": "20:10",
+    "dose": "500 mg"
   }
 ]
