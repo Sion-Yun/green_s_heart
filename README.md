@@ -26,9 +26,10 @@ This project implements a object-oriented programming concepts for the code's re
 4. Encapsulation - The medication list is kept private, to ensure data integrity.
 
 ### Assumptions
-- Long term persistence of the user data is not required.
-- Basic input validation is implemented for user login and medication management
+1. Long term persistence of the user data is not required.
+2. Basic input validation is implemented for user login and medication management
   - The user database is not yet implemented.
   - Sample user data is stored at /data/medications.json
-- This project is extensible for future changes, including modifications in UI/UX.
+3. This project is extensible for future changes, including modifications in UI/UX.
+
 
