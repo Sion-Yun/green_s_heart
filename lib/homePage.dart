@@ -43,6 +43,7 @@ class _HomePageState extends State<HomePage> {
           itemCount: medicationList.length,  // Number of items in the list
           itemBuilder: (context, idx) {
             return Card(
+              // It was not possible to provide detailed UI due to limited time.
               // TODO - change to TableView to show the field names
               child: ListTile(
                 leading: Icon(Icons.medication),
