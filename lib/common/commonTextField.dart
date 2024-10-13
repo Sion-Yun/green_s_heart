@@ -1,23 +1,26 @@
 import 'package:flutter/material.dart';
 
-// Text Field
+// Reusable text field widget
+// From https://www.boltuix.com/2023/05/how-to-use-flutter-text-field-complete.html
 class CommonTextField extends StatefulWidget {
-  final TextEditingController controller;
-  final String? hintText;
-  final TextInputType? keyboardType;
-  final bool obscureText;
-  final Function(String)? onChanged;
-  final String? helperText;
-  final String? labelText;
-  final int? maxLines;
+  // Properties of CommonTextField
+  final TextEditingController controller;  // Text input controller
+  final String? hintText;  // Hint text to be displayed when the field is empty
+  final TextInputType? keyboardType;  // Keyboard type to display
+  final bool obscureText;  // To obscure input text (i.e. password)
+  final Function(String)? onChanged;  // Callback function for text changes
+  final String? helperText;  // To assist the user when typing
+  final String? labelText;  // Label text
+  final int? maxLines;  // Max number of lines allowed for the field
   final bool hasError;
   final IconData? prefixIconData;
   final IconData? passwordHideIcon;
   final IconData? passwordShowIcon;
-  final TextInputAction? textInputAction;
-  final Color? textColor;
-  final Color? accentColor;
+  final TextInputAction? textInputAction;  // Action button on the keyboard
+  final Color? textColor;  // Input text color
+  final Color? accentColor;  // Accent color of the field
 
+  // Constructor
   const CommonTextField({
     Key? key,
     required this.controller,
@@ -37,17 +40,21 @@ class CommonTextField extends StatefulWidget {
     this.accentColor,
   }) : super(key: key);
 
+  // Creates state for CommonTextField
   @override
   _CommonTextFieldState createState() => _CommonTextFieldState();
 }
 
+// State class for CommonTextFieldState
 class _CommonTextFieldState extends State<CommonTextField> {
   bool _isObscure = false;
 
+  // CommonTextField's UI
   @override
   Widget build(BuildContext context) {
+    // Get current time
     final theme = Theme.of(context);
-
+    // Sets the properties of CommonTextFieldState
     return TextField(
       controller: widget.controller,
       keyboardType: widget.keyboardType,
@@ -56,15 +63,21 @@ class _CommonTextFieldState extends State<CommonTextField> {
       textInputAction: widget.textInputAction,
       maxLines: !_isObscure ? widget.maxLines : 1,
       style: TextStyle(color: widget.textColor ?? Colors.black54), // Set text color
+
+      // Input decoration
       decoration: InputDecoration(
         hintText: widget.hintText,
         labelText: widget.labelText ?? 'Default Simple TextField', // Use confirmation text as label if provided, else use default label text
         labelStyle: TextStyle(color: widget.accentColor ?? Colors.black54), // Set accent color
         helperText: widget.helperText,
+
+        // Prefix icon
         prefixIcon: widget.prefixIconData != null
             ? Icon(widget.prefixIconData,
               color: widget.accentColor ?? theme.colorScheme.primary) // Set accent color for prefix icon
             : null,
+
+        // Suffix Icon
         suffixIcon: widget.obscureText
             ? IconButton(
           onPressed: () {
@@ -77,6 +90,8 @@ class _CommonTextFieldState extends State<CommonTextField> {
           color: widget.accentColor ?? theme.colorScheme.primary,
         )
             : null,
+
+        // Paddings and border styles
         contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
