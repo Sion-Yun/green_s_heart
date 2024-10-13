@@ -56,6 +56,7 @@ class _HomePageState extends State<HomePage> {
                     Text(medicationList[idx].name ?? ""),
                     Text(medicationList[idx].time ?? ""),
                     Text(medicationList[idx].dose ?? ""),
+                  //   TODO - display prescribed medication details
                   ],
                 ),
               ),
